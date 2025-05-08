@@ -1,143 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>2000 Videos Pack - Only 399 PKR</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 1rem;
-  }
-  .container {
-    background: rgba(0,0,0,0.7);
-    border-radius: 12px;
-    max-width: 350px;
-    width: 100%;
-    padding: 24px 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-    text-align: center;
-  }
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    text-align: center;
-    line-height: 1.3;
-  }
-  .price {
-    font-size: 2.6rem;
-    font-weight: 700;
-    margin: 10px 0 30px 0;
-    color: #ffce00;
-    text-align: center;
-  }
-  .feature-list {
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px 0;
-  }
-  .feature-list li {
-    margin-bottom: 12px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-  }
-  .feature-list li::before {
-    content: '✔';
-    color: #32cd32;
-    margin-right: 8px;
-    font-weight: 700;
-  }
-  .btn-buy {
-    display: inline-block;
-    background: #ff5722;
-    color: white;
-    padding: 14px 0;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    user-select: none;
-  }
-  .btn-buy:hover {
-    background: #e64a19;
-  }
-  .payment-info {
-    margin-top: 24px;
-    font-size: 0.9rem;
-    background-color: #222;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
-    line-height: 1.4;
-  }
-  .footer {
-    margin-top: 20px;
-    font-size: 0.75rem;
-    color: #aaa;
-    text-align: center;
-  }
-  @media (max-width: 380px) {
-    h1 {
-      font-size: 1.6rem;
+  <meta charset="UTF-8">
+  <title>Simple Online Store</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; }
+    .header { background: #333; color: #fff; padding: 20px; text-align: center; }
+    .products { display: flex; flex-wrap: wrap; justify-content: center; margin: 40px 0; }
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin: 20px;
+      width: 250px;
+      padding: 20px;
+      text-align: center;
     }
-    .price {
-      font-size: 2.4rem;
+    .product-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 4px; }
+    .product-name { font-size: 18px; margin: 15px 0 10px; }
+    .price { color: #e91e63; font-size: 20px; font-weight: bold; }
+    .old-price { text-decoration: line-through; color: #888; margin-left: 10px; }
+    .shop-btn {
+      background: #e91e63;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.2s;
     }
-    .btn-buy {
-      font-size: 1.1rem;
-    }
-  }
-</style>
+    .shop-btn:hover { background: #c2185b; }
+  </style>
 </head>
 <body>
-  <div class="container" role="main">
-    <h1>Get 2000+ Videos Pack</h1>
-    <p class="subtitle">All premium quality videos in one unbeatable package! Secure your access today and get instant downloads.</p>
-    <div class="price">Only <span>399 PKR</span></div>
-    <ul class="feature-list" aria-label="Package features">
-      <li>2000+ high-quality videos</li>
-      <li>Instant download after purchase</li>
-      <li>Compatible with all devices</li>
-      <li>24/7 customer support</li>
-    </ul>
-    <button class="btn-buy" id="buyBtn" aria-label="Buy Now for 399 PKR">Buy Now</button>
-    <div class="payment-info" role="region" aria-live="polite" aria-atomic="true" id="paymentInfo">
-      Payment Options:<br/>
-      - JazzCash, EasyPaisa, Bank Transfer<br/>
-      After clicking Buy Now, you will get payment instructions.
-    </div>
-    <div class="footer">© 2025 Digital Videos Store</div>
+  <div class="header">
+    <h1>My Online Store</h1>
+    <p>Best products at the best prices!</p>
   </div>
-<script>
-  document.getElementById('buyBtn').addEventListener('click', function() {
-    alert('Thank you for your interest!\\n\nPlease send 399 PKR to one of the following accounts to complete your purchase:\\n\nJazzCash: 0300-1234567\\nEasyPaisa: 0311-7654321\\nBank Transfer: XYZ Bank, Account No: 1234567890\\n\nAfter payment, send your payment proof to support@example.com and you will receive the download link.');
-  });
-</script>
+  <div class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x180" alt="Product 1">
+      <div class="product-name">Laced Stylish Jogger For Men</div>
+      <div>
+        <span class="price">$20.99</span>
+        <span class="old-price">$30.99</span>
+      </div>
+      <button class="shop-btn">Shop Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/250x180" alt="Product 2">
+      <div class="product-name">Classic White Sneakers</div>
+      <div>
+        <span class="price">$25.99</span>
+        <span class="old-price">$35.99</span>
+      </div>
+      <button class="shop-btn">Shop Now</button>
+    </div>
+    <!-- Add more product cards as needed -->
+  </div>
 </body>
 </html>
-</content>
-</create_file>
